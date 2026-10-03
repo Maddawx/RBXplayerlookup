@@ -1,0 +1,15 @@
+# Netlify configuration for Player Lookup
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+# Pretty API paths → the single function
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
+[functions]
+  node_bundler = "esbuild"
+  # roblox-core.js lives one level up from the functions folder
+  included_files = ["roblox-core.js"]
