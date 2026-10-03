@@ -1,6 +1,6 @@
 # Netlify configuration for Player Lookup
 [build]
-  publish = "."
+  publish = "public"
   functions = "netlify/functions"
 
 # Pretty API paths → the single function
